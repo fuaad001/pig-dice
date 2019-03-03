@@ -2,7 +2,12 @@
 var newPlayer1 = "";
 var newPlayer2 = "";
 
+
+
+
+
 //User Interface logic
+//Submission of Player One Details & Navigating to playing board
 $(document).ready(function(){
   $(".player-one").submit(function(event){
     event.preventDefault();
@@ -15,6 +20,8 @@ $(document).ready(function(){
     $("#total-score1").text(0);
     $("#total-points1").text(0);
   });
+
+//Submission of Player Two Details & Navigating to playing board
   $(".player-two").submit(function(event){
     event.preventDefault();
     var name = $(".player2-name").val();
@@ -27,19 +34,27 @@ $(document).ready(function(){
     $("#total-score2").text(0);
     $("#total-points2").text(0);
   });
+
+//Player One rolling the dice
   $("#roll-dice1").click(function(){
     play1();
     $("#total-score1").text(newPlayer1.score);
   });
+
+//Player One holding and passing
   $("#pass1").click(function(){
     newPlayer1.tally();
     $("#total-points1").text(newPlayer1.finalScore);
     pass1();
   });
+
+//Player Two rolling the dice
   $("#roll-dice2").click(function(){
     play2();
     $("#total-score2").text(newPlayer2.score);
   });
+
+//Player Two holding and passing
   $("#pass2").click(function(){
     newPlayer2.tally();
     $("#total-points2").text(newPlayer2.finalScore);
@@ -47,6 +62,7 @@ $(document).ready(function(){
   });
 });
 
+//Function of Player One pass & hold button
 var pass1 = function(){
   $(document).ready(function(){
     $(".player1-board").addClass("inactive");
@@ -61,6 +77,7 @@ var pass1 = function(){
   });
 };
 
+//Function of Player Two pass & hold button
 var pass2 = function(){
   $(document).ready(function(){
     $(".player1-board").addClass("active");
@@ -78,7 +95,9 @@ var pass2 = function(){
 
 
 
+
 //Bussines logic
+//New Player Constructor
 var Player = function(name){
   this.name = name;
   this.score = [];
@@ -87,6 +106,7 @@ var Player = function(name){
   this.finalScore = [];
 };
 
+//Function to run if dice roll is above one to add all individual roll scores
 Player.prototype.win = function(){
   var total = 0;
   this.rolls.forEach(function(roll){
@@ -98,10 +118,12 @@ Player.prototype.win = function(){
   this.score.push(score);
 };
 
+//Function to run if dice roll is one to delete round score
 Player.prototype.lose = function(){
   this.rolls = [];
 };
 
+//Function adding each round's score to get total score
 Player.prototype.tally = function(){
   this.rolls = [];
   this.tallys.push(parseInt(this.score));
@@ -115,8 +137,9 @@ Player.prototype.tally = function(){
   this.finalScore.push(score1);
 };
 
+//Function to test if a player has reached 100 points
 Player.prototype.finish = function(){
-  var check = this.score + this.finalScore;
+  var check = parseInt(this.score) + parseInt(this.finalScore);
   if(check >= 100){
     $(document).ready(function(){
       $(".celebration").fadeIn();
@@ -130,6 +153,7 @@ Player.prototype.finish = function(){
   };
 };
 
+//Function to roll dice for Player One
 var play1 = function(){
   var dice = [1,2,3,4,5,6];
 
@@ -168,6 +192,7 @@ var play1 = function(){
   };
 };
 
+//Function to roll dice for Player Two
 var play2 = function(imageChanger){
   var dice = [1,2,3,4,5,6];
 
