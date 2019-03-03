@@ -97,3 +97,7 @@ Player.prototype.win = function(){
   this.score = [];
   this.score.push(score);
 };
+
+Player.prototype.lose = function(){
+  this.rolls = [];
+};
