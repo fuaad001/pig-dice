@@ -165,3 +165,27 @@ ol > li{
   font-size: xx-large;
   color: #17a2b8;
 }
+
+@media only screen and (min-width: 812px) {
+  .jumbotron{
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .pig-image{
+    width: 30%;
+  }
+
+  .dice-image1{
+    margin-left: 4%;
+  }
+
+  .login-player-one, .login-player-two{
+    margin-top: 10px;
+  }
+
+  #celebration{
+    width: 50%;
+  }
+}
