@@ -74,6 +74,8 @@ var pass1 = function(){
     $(".pass1").attr("disabled", true);
     $(".pass2").attr("disabled", false);
     $(".roll-one2").hide();
+    $("#turn-count2").text(0);
+    $("#total-score2").text(0);
   });
 };
 
@@ -89,6 +91,8 @@ var pass2 = function(){
     $(".pass2").attr("disabled", true);
     $(".pass1").attr("disabled", false);
     $(".roll-one1").hide();
+    $("#turn-count1").text(0);
+    $("#total-score1").text(0);
   });
 };
 
@@ -135,6 +139,8 @@ Player.prototype.tally = function(){
   score1 = score1 + sum;
   this.finalScore = [];
   this.finalScore.push(score1);
+  this.score = [];
+  this.score.push(0);
 };
 
 //Function to test if a player has reached 100 points
@@ -164,6 +170,8 @@ var play1 = function(){
   if(diceRoll === 1){
     document.getElementById("dice1").src = "images/dice1.png";
     newPlayer1.lose();
+    newPlayer2.score = [];
+    newPlayer2.score.push(0);
     pass1();
     $(document).ready(function(){
       $(".roll-one1").show();
@@ -203,6 +211,8 @@ var play2 = function(imageChanger){
   if(diceRoll === 1){
     document.getElementById("dice2").src = "images/dice1.png";
     newPlayer2.lose();
+    newPlayer1.score = [];
+    newPlayer1.score.push(0);
     pass2();
     $(document).ready(function(){
       $(".roll-one2").show();
