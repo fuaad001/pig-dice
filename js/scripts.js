@@ -74,3 +74,15 @@ var pass2 = function(){
     $(".roll-one1").hide();
   });
 };
+
+
+
+
+//Bussines logic
+var Player = function(name){
+  this.name = name;
+  this.score = [];
+  this.rolls = [];
+  this.tallys = [];
+  this.finalScore = [];
+};
