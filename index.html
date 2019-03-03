@@ -1,17 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
-    <title></title>
+    <title>Pig Dice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Charm|Niconne|Courgette|Kaushan+Script" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1></h1>
+      <div class="jumbotron">
+        <div class="row">
+          <img src="images/image.png" class="dice-image1">
+          <h1 class="navbar" id="title">Pig Dice</h1>
+          <img src="images/image.png" class="dice-image2">
+          <nav class="navbar navbar-dark primary-color">
+            <ul>
+              <li><a class="navbar-brand" href="index.html">Play Game</a></li>
+              <li><a class="navbar-brand" href="index2.html">How to Play</a></li>
+              <li><a class="navbar-brand" href="index3.html">Contact Developer</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="column">
+        <img src="images/pig.png" class="pig-image">
+      </div>
+
+      <div class="row page1">
+        <div class="col-md-6">
+          <div class ="login-player-one form-group">
+            <form class="player-one">
+              <h3 class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-danger text-white shadow-sm">Player One</h3>
+              <input type="text" required name="name" placeholder="Player Name" class="player1-name form-control">
+              <button type="submit" class="submit-name1 btn btn-danger button">Start game</button>
+            </form>
+          </div>
+
+          <div class="player1-board form-group active" id="player1-board">
+
+            <h3 class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-danger text-white shadow-sm">Player One</h3>
+            <h4>Name: <span id="name1"></span></h4>
+            <img id="dice1">
+            <h4>Turn Count: <span id="turn-count1"></span></h4>
+            <h4>Round Count: <span id="total-score1"></span></h4>
+            <h4>Total Points: <span id="total-points1"></span></h4>
+            <button type="button" id="roll-dice1" class="submit1 btn btn-danger">Roll Dice</button>
+            <button type="button" id="pass1" class="pass1 btn btn-danger">Hold & Pass</button>
+          </div>
+
+          <div class="roll-one1">
+            <p>Oops! You rolled a "One". <em>It's Player Two's turn!</em></p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="login-player-two form-group">
+            <form class="player-two">
+              <h3 class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Player Two</h3>
+              <input type="text" required name="name" placeholder="Player Name" class="player2-name form-control">
+              <button type="submit" class="submit-name2 btn btn-primary button">Start game</button>
+            </form>
+          </div>
+
+          <div class="player2-board form-group inactive" id="player2-board">
+            <h3 class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Player Two</h3>
+            <h4>Name: <span id="name2"></span></h4>
+            <img id="dice2">
+            <h4>Turn Count: <span id="turn-count2"></span></h4>
+            <h4>Round Count: <span id="total-score2"></span></h4>
+            <h4>Total Points: <span id="total-points2"></span></h4>
+            <button type="button" id="roll-dice2" class="submit2 btn btn-primary" disabled>Roll Dice</button>
+            <button type="button" id="pass2" class="pass2 btn btn-primary">hold & Pass</button>
+          </div>
+
+          <div class="roll-one2">
+            <p>Oops! You rolled a "One". <em>It's Player One's turn!</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="celebration column">
+        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-info text-white shadow-sm">Report</span>
+        <div class="">
+          <img  id="celebration">
+          <h4 class="font-weight-normal text-white text-center mb-0">Congratulations <span id="winner"></span>, you were the first to reach 100 point and have won the game!!!!</h4>
+        </div>
+      </div>
     </div>
   </body>
 </html>
