@@ -101,3 +101,16 @@ Player.prototype.win = function(){
 Player.prototype.lose = function(){
   this.rolls = [];
 };
+
+Player.prototype.tally = function(){
+  this.rolls = [];
+  this.tallys.push(parseInt(this.score));
+  var sum = 0;
+  this.tallys.forEach(function(tally){
+    sum += tally;
+  })
+  var score1 = 0;
+  score1 = score1 + sum;
+  this.finalScore = [];
+  this.finalScore.push(score1);
+};
