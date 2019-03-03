@@ -199,6 +199,17 @@ ol > li{
   }
 }
 
+.celebration-text{
+  font-family: 'Niconne', cursive;
+  font-size: xx-large;
+}
+
+#winner{
+  color: #17a2b8;
+  font-style: italic;
+  font-family: 'Courgette', cursive;
+}
+
 @media only screen and (max-width: 350px) {
   .dice-image1 {
     margin-left: 7%;
