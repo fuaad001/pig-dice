@@ -60,3 +60,17 @@ var pass1 = function(){
     $(".roll-one2").hide();
   });
 };
+
+var pass2 = function(){
+  $(document).ready(function(){
+    $(".player1-board").addClass("active");
+    $(".player1-board").removeClass("inactive");
+    $(".player2-board").addClass("inactive");
+    $(".player2-board").removeClass("active");
+    $(".submit2").attr("disabled", true);
+    $(".submit1").attr("disabled", false);
+    $(".pass2").attr("disabled", true);
+    $(".pass1").attr("disabled", false);
+    $(".roll-one1").hide();
+  });
+};
