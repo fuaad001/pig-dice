@@ -189,3 +189,12 @@ ol > li{
     width: 50%;
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .dice-image1{
+    margin-left: 7%;
+  }
+  .navbar-brand{
+    font-size: large;
+  }
+}
