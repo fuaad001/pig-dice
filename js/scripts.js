@@ -167,3 +167,41 @@ var play1 = function(){
     }
   };
 };
+
+var play2 = function(imageChanger){
+  var dice = [1,2,3,4,5,6];
+
+  var diceRoll = dice[Math.floor(Math.random() * dice.length)];
+
+  document.getElementById("turn-count2").innerHTML = diceRoll;
+
+  if(diceRoll === 1){
+    document.getElementById("dice2").src = "images/dice1.png";
+    newPlayer2.lose();
+    pass2();
+    $(document).ready(function(){
+      $(".roll-one2").show();
+      $(".roll-one1").hide();
+    });
+  }
+  else{
+    newPlayer2.rolls.push(diceRoll);
+    newPlayer2.win();
+    newPlayer2.finish();
+    if(diceRoll === 2){
+      document.getElementById("dice2").src = "images/dice2.png";
+    }
+    else if(diceRoll === 3){
+      document.getElementById("dice2").src = "images/dice3.svg";
+    }
+    else if(diceRoll === 4){
+      document.getElementById("dice2").src = "images/dice4.png";
+    }
+    else if(diceRoll === 5){
+      document.getElementById("dice2").src = "images/dice5.png";
+    }
+    else if(diceRoll === 6){
+      document.getElementById("dice2").src = "images/dice6.png";
+    }
+  }
+};
