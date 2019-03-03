@@ -1,12 +1,12 @@
-*{
+* {
   text-align: center;
 }
 
-.page1{
+.page1 {
   font-family: 'Courgette', cursive;
 }
 
-.jumbotron{
+.jumbotron {
   padding: 2px;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -15,91 +15,91 @@
   font-family: 'Cinzel', serif;
 }
 
-.dice-image1{
+.dice-image1 {
   margin-left: 13%;
 }
 
-.dice-image1, .dice-image2{
+.dice-image1, .dice-image2 {
   width: 15%;
   height: 15%;
 }
 
-nav>ul>li{
+nav>ul>li {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
 }
 
-.pig-image{
+.pig-image {
   width: 60%;
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#celebration{
+#celebration {
   padding-top: 5%;
   padding-bottom: 5%;
   width: 100%;
 }
 
-body{
+body {
   background-image: url("https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/219150/3d212340173fe4f5027f662b805ce68a5de8c6d4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
 
-.player1-board, .celebration{
+.player1-board, .celebration {
   border: 2px solid #dc3545;
   border-radius: 5px;
   padding: 5px;
 }
 
-.celebration{
+.celebration {
   border: 2px solid #17a2b8;
   margin-bottom: 10px;
 }
 
-.player2-board{
+.player2-board {
   border: 2px solid #007bff;
   border-radius: 5px;
   padding: 5px;
 }
 
-.player1-board h4, .player2-board h4{
+.player1-board h4, .player2-board h4 {
   font-weight: bold;
 }
 
-.player1-board, .player2-board, .celebration, .roll-one1, .roll-one2{
+.player1-board, .player2-board, .celebration, .roll-one1, .roll-one2 {
   display: none;
 }
 
-#name1, #name2, #turn-count1, #turn-count2, #total-score1, #total-score2, #total-points1, #total-points2{
+#name1, #name2, #turn-count1, #turn-count2, #total-score1, #total-score2, #total-points1, #total-points2 {
   font-weight: normal;
   font-family: 'Charm', cursive;
   color: #17a2b8;
 }
 
-#dice1, #dice2{
+#dice1, #dice2 {
   width: 45%;
 }
 
-.player1-board, .player2-board{
+.player1-board, .player2-board {
   height: 100%;
 }
 
-.inactive{
+.inactive {
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0.3;
   color: white;
   border: 1px solid grey;
 }
 
-.active{
+.active {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -107,17 +107,17 @@ ol > li{
   text-align: left;
 }
 
-.contacts img{
+.contacts img {
   width: 3em;
   margin-left: 2em;
   margin-right: 2em;
 }
 
-.contacts img:hover{
+.contacts img:hover {
   width: 3.2em;
 }
 
-.contacts{
+.contacts {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 4%;
   text-align: center;
@@ -125,24 +125,24 @@ ol > li{
   border-radius: 5px;
 }
 
-.contactme{
+.contactme {
   text-align: center;
   padding: 5%;
 }
 
-#social{
+#social {
   margin-bottom: 2%;
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
   font-weight: bold;
 }
 
-.button{
+.button {
   margin-top: 10px;
 }
 
-.page2{
+.page2 {
   padding: 3%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -150,46 +150,46 @@ ol > li{
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.login-player-one{
+.login-player-one {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.heading{
+.heading {
   font-family: 'Courgette', cursive;
   color: #dc3545;
 }
 
-#instructions{
+#instructions {
   font-family: 'Niconne', cursive;
   font-size: xx-large;
   color: #17a2b8;
 }
 
 @media only screen and (min-width: 812px) {
-  .jumbotron{
+  .jumbotron {
     padding: 5px;
     margin-bottom: 10px;
     margin-top: 10px;
   }
 
-  .pig-image{
+  .pig-image {
     width: 30%;
   }
 
-  .dice-image1{
+  .dice-image1 {
     margin-left: 4%;
   }
 
-  .login-player-one, .login-player-two{
+  .login-player-one, .login-player-two {
     margin-top: 10px;
   }
 
-  #celebration{
+  #celebration {
     width: 50%;
   }
 
-  .roll-one1, .roll-one2{
+  .roll-one1, .roll-one2 {
     position: fixed;
     color: white;
     top: 50%;
@@ -200,10 +200,10 @@ ol > li{
 }
 
 @media only screen and (max-width: 350px) {
-  .dice-image1{
+  .dice-image1 {
     margin-left: 7%;
   }
-  .navbar-brand{
+  .navbar-brand {
     font-size: large;
   }
 }
