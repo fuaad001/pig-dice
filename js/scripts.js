@@ -86,3 +86,14 @@ var Player = function(name){
   this.tallys = [];
   this.finalScore = [];
 };
+
+Player.prototype.win = function(){
+  var total = 0;
+  this.rolls.forEach(function(roll){
+    total += roll;
+  })
+  var score = 0;
+  score = score + total;
+  this.score = [];
+  this.score.push(score);
+};
