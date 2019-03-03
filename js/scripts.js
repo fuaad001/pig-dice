@@ -129,3 +129,41 @@ Player.prototype.finish = function(){
     document.getElementById("winner").innerHTML = this.name;
   };
 };
+
+var play1 = function(){
+  var dice = [1,2,3,4,5,6];
+
+  var diceRoll = dice[Math.floor(Math.random() * dice.length)];
+
+  document.getElementById("turn-count1").innerHTML = diceRoll;
+
+  if(diceRoll === 1){
+    document.getElementById("dice1").src = "images/dice1.png";
+    newPlayer1.lose();
+    pass1();
+    $(document).ready(function(){
+      $(".roll-one1").show();
+      $(".roll-one2").hide();
+    });
+  }
+  else{
+    newPlayer1.rolls.push(diceRoll);
+    newPlayer1.win();
+    newPlayer1.finish();
+    if(diceRoll === 2){
+      document.getElementById("dice1").src = "images/dice2.png";
+    }
+    else if(diceRoll === 3){
+      document.getElementById("dice1").src = "images/dice3.svg";
+    }
+    else if(diceRoll === 4){
+      document.getElementById("dice1").src = "images/dice4.png";
+    }
+    else if(diceRoll === 5){
+      document.getElementById("dice1").src = "images/dice5.png";
+    }
+    else if(diceRoll === 6){
+      document.getElementById("dice1").src = "images/dice6.png";
+    }
+  };
+};
