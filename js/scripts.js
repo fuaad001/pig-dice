@@ -114,3 +114,18 @@ Player.prototype.tally = function(){
   this.finalScore = [];
   this.finalScore.push(score1);
 };
+
+Player.prototype.finish = function(){
+  var check = this.score + this.finalScore;
+  if(check >= 100){
+    $(document).ready(function(){
+      $(".celebration").fadeIn();
+      $(".player1-board").slideUp();
+      $(".player2-board").slideUp();
+      $(".roll-one1").hide();
+      $(".roll-one2").hide();
+    });
+    document.getElementById("celebration").src = "images/celebration.gif";
+    document.getElementById("winner").innerHTML = this.name;
+  };
+};
