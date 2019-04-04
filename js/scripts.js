@@ -240,3 +240,8 @@ var play2 = function(imageChanger){
     }
   }
 };
+
+var computerEasy = function(){
+  var compEasy = new Player (Computer-Easy);
+  
+}
