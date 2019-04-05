@@ -192,7 +192,7 @@ var play1 = function(){
 };
 
 //Function to roll dice for Player Two
-var play2 = function(imageChanger){
+var play2 = function(){
   var dice = [1,2,3,4,5,6];
 
   var diceRoll = dice[Math.floor(Math.random() * dice.length)];
