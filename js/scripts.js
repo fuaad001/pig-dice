@@ -1,6 +1,7 @@
 //Global variables
 var newPlayer1 = "";
 var newPlayer2 = "";
+var numberArray = [1, 2, 3, 4, 5, 6];
 
 
 
@@ -182,21 +183,11 @@ var play1 = function(){
     newPlayer1.rolls.push(diceRoll);
     newPlayer1.win();
     newPlayer1.finish();
-    if(diceRoll === 2){
-      document.getElementById("dice1").src = "images/dice2.png";
-    }
-    else if(diceRoll === 3){
-      document.getElementById("dice1").src = "images/dice3.svg";
-    }
-    else if(diceRoll === 4){
-      document.getElementById("dice1").src = "images/dice4.png";
-    }
-    else if(diceRoll === 5){
-      document.getElementById("dice1").src = "images/dice5.png";
-    }
-    else if(diceRoll === 6){
-      document.getElementById("dice1").src = "images/dice6.png";
-    }
+    numberArray.forEach(function(number){
+      if(diceRoll === number){
+        document.getElementById("dice1").src = "images/dice" + number + ".png";
+      }
+    })
   };
 };
 
@@ -223,25 +214,12 @@ var play2 = function(imageChanger){
     newPlayer2.rolls.push(diceRoll);
     newPlayer2.win();
     newPlayer2.finish();
-    if(diceRoll === 2){
-      document.getElementById("dice2").src = "images/dice2.png";
-    }
-    else if(diceRoll === 3){
-      document.getElementById("dice2").src = "images/dice3.svg";
-    }
-    else if(diceRoll === 4){
-      document.getElementById("dice2").src = "images/dice4.png";
-    }
-    else if(diceRoll === 5){
-      document.getElementById("dice2").src = "images/dice5.png";
-    }
-    else if(diceRoll === 6){
-      document.getElementById("dice2").src = "images/dice6.png";
-    }
+    numberArray.forEach(function(number){
+      if(diceRoll === number){
+        document.getElementById("dice2").src = "images/dice" + number + ".png";
+      }
+    })
   }
 };
 
-var computerEasy = function(){
-  var compEasy = new Player (Computer-Easy);
-  
-}
+
